@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Design tokens. Components reference these variables only — theming an app
+ * (or a single subtree) means overriding variables, not editing components.
+ */
+:root {
+  --ui-bg: #fcfcfb;
+  --ui-bg-page: #f9f9f7;
+  --ui-bg-subtle: #f0efec;
+  --ui-ink: #0b0b0b;
+  --ui-ink-2: #52514e;
+  --ui-ink-3: #898781;
+  --ui-line: rgba(11, 11, 11, 0.12);
+  --ui-accent: #2a78d6;
+  --ui-accent-hover: #1c5cab;
+  --ui-accent-ink: #ffffff;
+  --ui-danger: #d03b3b;
+  --ui-danger-hover: #a52f2f;
+  --ui-good: #006300;
+  --ui-good-bg: #e4f3e4;
+  --ui-warn: #7a5200;
+  --ui-warn-bg: #fdf3dd;
+  --ui-danger-bg: #fbe7e7;
+  --ui-radius: 0.5rem;
+  --ui-ring: color-mix(in srgb, var(--ui-accent) 35%, transparent);
+}
+
+.dark {
+  --ui-bg: #1a1a19;
+  --ui-bg-page: #0d0d0d;
+  --ui-bg-subtle: #262625;
+  --ui-ink: #ffffff;
+  --ui-ink-2: #c3c2b7;
+  --ui-ink-3: #898781;
+  --ui-line: rgba(255, 255, 255, 0.14);
+  --ui-accent: #3987e5;
+  --ui-accent-hover: #6da7ec;
+  --ui-accent-ink: #ffffff;
+  --ui-danger: #e66767;
+  --ui-danger-hover: #ee9292;
+  --ui-good: #4ec44e;
+  --ui-good-bg: #12300f;
+  --ui-warn: #fab219;
+  --ui-warn-bg: #3a2f14;
+  --ui-danger-bg: #3a1a1a;
+}
+
+html,
+body {
+  background: var(--ui-bg-page);
+  color: var(--ui-ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
